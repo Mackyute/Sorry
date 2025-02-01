@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('e.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    position: relative;
+    text-align: center; /* Center text for better mobile view */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em; /* Use relative units for better scaling */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4; 
+    color: white;
+    transition: background-color 0.3s;
+    width: 100%; /* Make buttons full width on mobile */
+    max-width: 300px; /* Limit max width for larger screens */
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.hidden {
+    display: none;
+}
+
+#loveLetter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%; /* Make the love letter responsive */
+    max-width: 400px; /* Limit max width for larger screens */
+}
+
+.heart-border {
+    border: 5px dashed #ff69b4;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.heart-border::before,
+.heart-border::after {
+    content: "❤️";
+    position: absolute;
+    font-size: 20px;
+}
+
+.heart-border::before {
+    top: -10px;
+    left: 10px;
+}
+
+.heart-border::after {
+    top: -10px;
+    right: 10px;
+}
+
+/* Media Queries for further adjustments */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    button {
+        padding: 10px 20px; /* Adjust button padding for mobile */
+    }
+
+    #loveLetter {
+        padding: 15px; /* Adjust padding for love letter */
+    }
+}
